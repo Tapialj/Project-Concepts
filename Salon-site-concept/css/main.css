@@ -451,7 +451,8 @@ header .flex {
 }
 
 .product-info {
-    margin: 1rem 7rem;
+    margin: 1rem auto;
+    width: 80%;
 }
 
 .product-info img {
@@ -463,7 +464,7 @@ header .flex {
 }
 
 .product-info p {
-    padding-top: .2rem;
+    padding-top: 0.2rem;
     font-size: 1.2rem;
     text-align: center;
 }
@@ -479,7 +480,7 @@ header .flex {
 }
 
 .info-box p {
-    padding: 1rem 0;
+    padding: 1rem 0.5rem;
 }
 
 .products .grid {
@@ -536,12 +537,12 @@ header .flex {
     font-weight: 500; 
 }
 
-.service-list h2 {
+.service-list .service-line {
     padding: 8px 0;
     cursor: default;
 }
 
-.service-list h2::after {
+.service-list .service-line::after {
     display: block;
     content: "";
     border-bottom: 2px solid #c21e6d;
@@ -549,7 +550,7 @@ header .flex {
     transition: transform 1s ease-in-out;
 }
 
-.service-list h2:hover::after {
+.service-list .service-line:hover::after {
     transform: scaleX(1);
 }
 
@@ -858,6 +859,11 @@ iframe {
         margin: 3rem 4rem;
     }
 
+    .stylist-bio {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
     .stylists .grid > *:first-child {
         grid-column: 1 / span 2;
         grid-row: 1;
@@ -1001,14 +1007,39 @@ iframe {
         grid-template-rows: auto auto;
     }
 
+    .products .product-info {
+        margin: 1rem 2rem;
+    }
+
+    .info-box p {
+        padding: 0.5rem 1rem;
+    }
+
     /*Stylists*/
+
+    .stylists .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+        align-items: flex-start;
+    }
+
+    .stylist-info {
+        margin: 3rem 4rem;
+    }
 
     .stylist-bio {
         font-size: 1rem;
         line-height: 1.5rem;
     }
 
-    /*none needed currently*/
+    .stylists .grid > *:first-child {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .stylists .grid > *:nth-child(2) {
+        grid-row: 2;
+    }
 
     /*Services*/
 
@@ -1025,6 +1056,10 @@ iframe {
     .book .grid {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(2, 1fr);
+    }
+
+    .information iframe {
+        width: 80%;
     }
 
     .info-container {
