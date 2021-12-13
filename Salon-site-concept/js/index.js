@@ -6,7 +6,7 @@ $(function ()
 
     function expandMenu()
     {
-        $(".desktop-menu").toggleClass("menu-expand");
+        $(".primary-nav").toggleClass("menu-expand");
         $(this).toggleClass("menu-open");
     };
 });
